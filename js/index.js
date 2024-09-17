@@ -1,18 +1,7 @@
 const section = document.getElementById('first');
 const text = document.getElementById('text');
+const standingsText = document.getElementById('standingsText');
 const apiKey = '63f990452fcc30086d6de43fccaab951';
-const githubUrl = 'https://api.github.com/users/hcd00/repos';
-fetch(githubUrl)
-  .then(response => {
-    return response.json();
-  })
-  .then(response => {
-    let repositories = response;
-    console.log(repositories);
-  })
-  .catch(error => {
-    console.error("There were an error in fetching your request.", error);
-  })
 
 var myHeaders = new Headers();
 myHeaders.append("x-rapidapi-key", `${apiKey}`);
@@ -55,4 +44,5 @@ const getStandings = async () => {
 
 getStandings().then(data => {
   console.log(data.league.standings[0]);
+  standingsText.innerHTML = data.league.standings[0];
 })
