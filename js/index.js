@@ -14,6 +14,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
+//Team endpoint
 const getTeam = async () => {
   try {
     const response = await fetch("https://v3.football.api-sports.io/teams?id=33", requestOptions)
@@ -48,6 +49,7 @@ getTeam().then(data => {
   section.appendChild(venueImg);
 })
 
+//Standings endpoint
 const getStandings = async () => {
   try {
     const response = await fetch("https://v3.football.api-sports.io/standings?league=39&season=2020", requestOptions)
@@ -76,36 +78,36 @@ getStandings().then(data => {
     headerRow.appendChild(header);
   });
   //Header Row to Table
-  table.appendChild(headerRow);
-  //set for loop for standings
-  standings.forEach(teamStanding => {
-    const row = document.createElement('tr');
-    //Cells for each column
-    //Rank
-    const rankCell = document.createElement('td');
-    rankCell.appendChild(document.createTextNode(teamStanding.rank));
-    row.appendChild(rankCell);
-    //Team
-    const teamCell = document.createElement('td');
-    teamCell.appendChild(document.createTextNode(teamStanding.team.name));
-    row.appendChild(teamCell);
+  // table.appendChild(headerRow);
+  // //set for loop for standings
+  // standings.forEach(teamStanding => {
+  //   const row = document.createElement('tr');
+  //   //Cells for each column
+  //   //Rank
+  //   const rankCell = document.createElement('td');
+  //   rankCell.appendChild(document.createTextNode(teamStanding.rank));
+  //   row.appendChild(rankCell);
+  //   //Team
+  //   const teamCell = document.createElement('td');
+  //   teamCell.appendChild(document.createTextNode(teamStanding.team.name));
+  //   row.appendChild(teamCell);
 
-    //Points
-    const pointsCell = document.createElement('td');
-    console.log(standings.points);
-    pointsCell.appendChild(document.createTextNode(standings.points));
-    row.appendChild(pointsCell);
+  //   //Points
+  //   const pointsCell = document.createElement('td');
+  //   console.log(standings.points);
+  //   pointsCell.appendChild(document.createTextNode(standings.points));
+  //   row.appendChild(pointsCell);
 
-    //GD
-    const goalDiffCell = document.createElement('td');
-    console.log(standings.goalsDiff);
-    goalDiffCell.appendChild(document.createTextNode(standings.goalsDiff));
-    row.appendChild(goalDiffCell);
+  //   //GD
+  //   const goalDiffCell = document.createElement('td');
+  //   console.log(standings.goalsDiff);
+  //   goalDiffCell.appendChild(document.createTextNode(standings.goalsDiff));
+  //   row.appendChild(goalDiffCell);
 
-    table.appendChild(row);
+  //   table.appendChild(row);
 
-  });
+  // });
   standingsSection.appendChild(table);
   standingsText.innerHTML = standings[0].rank + ' ' + standings[0].team.name + '<br>' +
-    standings[1].rank + ' ' + standings[1].team.name + ' ' + standings[1].points + stanings[1].goalsDiff;
+    standings[1].rank + ' ' + standings[1].team.name + ' ' + standings[1].points + standings[1].goalsDiff;
 })
