@@ -1,4 +1,44 @@
-.card {
+/* #teamContainer {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;  Wrap cards to the next row on smaller screens 
+    gap: 20px;  Space between the cards 
+    justify-content: space-between;
+  }
+  */
+
+#teamContainer {
+    display: flex;
+    justify-content: center; /* Center the card horizontally */
+    align-items: center;     /* Center the card vertically */
+    height: 100vh; 
+ 
 }
+.team-card {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    align-items: center;
+    gap: 7em;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 80%;
+   /* max-width: 600px;*/ /* Adjust the width of each card */
+  }
+  
+.team-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain; /* Ensures the logo fits within the image */
+    margin-right: 20px;
+  }
+  
+  .team-card h3 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .team-card p {
+    margin: 5px 0;
+  }
+  
