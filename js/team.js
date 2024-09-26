@@ -1,7 +1,7 @@
 const teamContainer = document.getElementById('teamContainer');
 
 //Headers for API
-const apiKey = '63f990452fcc30086d6de43fccaab951';
+const apiKey = '88d525fbd87eaa35a22b7f4330a7f769';
 var myHeaders = new Headers();
 myHeaders.append("x-rapidapi-key", `${apiKey}`);
 myHeaders.append("x-rapidapi-host", "v3.football.api-sports.io");
