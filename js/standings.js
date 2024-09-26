@@ -1,4 +1,4 @@
-const apiKey = '63f990452fcc30086d6de43fccaab951';
+const apiKey = '88d525fbd87eaa35a22b7f4330a7f769';
 const standingsContainer = document.getElementById('standingsContainer');
 //Accessing API
 var myHeaders = new Headers();

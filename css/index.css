@@ -1,44 +1,102 @@
-/* #teamContainer {
-    display: flex;
-    flex-wrap: wrap;  Wrap cards to the next row on smaller screens 
-    gap: 20px;  Space between the cards 
-    justify-content: space-between;
-  }
-  */
+body {
+  background-color: #ffffff;
+  color: #1b1915;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 150;
+  font-size: 1.25rem;
+  font-style: normal;
+  margin: 0;
+}
+
+h1 {
+  font-weight: bolder;
+  /* text-align: center; */
+}
+
+h2 {
+  font-size: larger;
+  text-align: center;
+}
+
+table {
+  background-color: #aaaaaa;
+}
+#header-container {
+  position: sticky;
+  top: 0;
+  /* z-index: 1000; */
+  background-color: #81907f;
+  padding: 1em;
+  border: .1em solid #464135;
+}
+
+/* Header */
+#header-nav {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+}
+
+/* Display evenly and in 1 line */
+#header-nav nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-around;
+}
+
+#header-nav nav li {
+  list-style: none;
+  margin: 0 1em;
+  /* Add some spacing between list items */
+}
+
+#header-nav nav a {
+  text-decoration: none;
+  /* Remove underline from links */
+  color: #1b1915;
+  /* Set link color */
+}
 
 #teamContainer {
-    display: flex;
-    justify-content: center; /* Center the card horizontally */
-    align-items: center;     /* Center the card vertically */
-    height: 100vh; 
- 
+  display: flex;
+  justify-content: center;
+  /* Center the card horizontally */
+  align-items: center;
+  /* Center the card vertically */
+  height: 50vh;
+
 }
+
 .team-card {
-    display: flex;
-    flex-direction: row; /* Horizontal layout */
-    align-items: center;
-    gap: 7em;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 80%;
-   /* max-width: 600px;*/ /* Adjust the width of each card */
-  }
-  
+  display: flex;
+  flex-direction: row;
+  /* Horizontal layout */
+  align-items: center;
+  gap: 7em;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  background-color: #7f8190;
+}
+
 .team-logo {
-    width: 80px;
-    height: 80px;
-    object-fit: contain; /* Ensures the logo fits within the image */
-    margin-right: 20px;
-  }
-  
-  .team-card h3 {
-    margin: 0;
-    font-size: 1.5em;
-  }
-  
-  .team-card p {
-    margin: 5px 0;
-  }
-  
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  /* Ensures the logo fits within the image */
+  margin-right: 20px;
+}
+
+.team-card h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.team-card p {
+  margin: 5px 0;
+}
